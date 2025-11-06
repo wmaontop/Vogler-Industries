@@ -3,6 +3,8 @@
 import { useState } from "react"
 import GlowButton from "./glow-button"
 import ParticleEffect from "./particle-effect"
+import { CHARACTER_IMAGES } from "@/lib/image-mapping"
+import Image from "next/image"
 
 export default function ClickerPanel({ clickValue, money, onMainClick, onClickBuy, onBoostBuy, boostActive }) {
   const [showParticles, setShowParticles] = useState({ x: 0, y: 0, show: false })
@@ -21,6 +23,16 @@ export default function ClickerPanel({ clickValue, money, onMainClick, onClickBu
 
   return (
     <div className="space-y-4">
+      <div className="relative h-32 rounded-xl overflow-hidden border border-white/10 bg-gradient-to-br from-white/10 to-white/5">
+        <Image
+          src={CHARACTER_IMAGES.logan || "/placeholder.svg"}
+          alt="Logan"
+          fill
+          className="object-cover opacity-80"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent" />
+      </div>
+
       <div className="bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 animate-pulse-glow">
         <p className="text-sm text-slate-400 mb-4">Click for Vogler Bucks</p>
         <button

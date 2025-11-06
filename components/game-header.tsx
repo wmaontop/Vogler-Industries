@@ -1,6 +1,8 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Image from "next/image"
+import { CHARACTER_IMAGES } from "@/lib/image-mapping"
 
 export default function GameHeader({ money, income }) {
   const [moneyPulse, setMoneyPulse] = useState(false)
@@ -21,12 +23,21 @@ export default function GameHeader({ money, income }) {
   }
 
   return (
-    <header className="flex items-center justify-between backdrop-blur-sm bg-white/5 rounded-xl p-6 border border-white/10 animate-pulse-glow">
-      <div>
+    <header className="flex items-center justify-between backdrop-blur-sm bg-gradient-to-r from-white/5 to-white/10 rounded-xl p-6 border border-white/10 animate-pulse-glow overflow-hidden relative">
+      <div className="absolute right-0 top-0 bottom-0 w-40 opacity-20">
+        <Image
+          src={CHARACTER_IMAGES.salesman || "/placeholder.svg"}
+          alt="Salesman"
+          fill
+          className="object-cover object-left"
+        />
+      </div>
+
+      <div className="relative z-10">
         <h1 className="text-3xl font-bold text-cyan-400">Vogler Industries</h1>
         <p className="text-sm text-slate-400">Build your tech empire</p>
       </div>
-      <div className="flex gap-8">
+      <div className="relative z-10 flex gap-8">
         <div className="text-right">
           <p className="text-xs text-slate-400 uppercase tracking-wider">Vogler Bucks</p>
           <p className={`text-2xl font-bold text-cyan-400 transition-all ${moneyPulse ? "scale-110" : "scale-100"}`}>

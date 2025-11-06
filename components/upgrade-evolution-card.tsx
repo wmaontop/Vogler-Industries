@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ArrowUp } from "lucide-react"
 import { getCurrentTier, getTierInfo, getEvolveProgress } from "@/lib/evolution"
+import { UPGRADE_IMAGES, TIER_VISUALS, TIER_COLORS } from "@/lib/image-mapping"
+import Image from "next/image"
 
 interface UpgradeEvolutionCardProps {
   upgrade: any
@@ -29,14 +31,35 @@ export default function UpgradeEvolutionCard({
   const progress = getEvolveProgress(owned, currentTier)
   const nextTierInfo = getTierInfo(upgrade.id, Math.min(currentTier + 1, 4))
 
+  const upgradeImage = UPGRADE_IMAGES[upgrade.id as keyof typeof UPGRADE_IMAGES]
+  const tierVisual = TIER_VISUALS[currentTier as keyof typeof TIER_VISUALS]
+  const tierColor = TIER_COLORS[currentTier as keyof typeof TIER_COLORS] || "from-blue-600 to-cyan-500"
+
   return (
-    <Card className="p-4 bg-gradient-to-br from-white/10 to-white/5 border-white/10 hover:border-cyan-500/30 transition-all">
-      <div className="flex items-start justify-between mb-3">
+    <Card
+      className={`p-4 bg-gradient-to-br ${tierColor}/20 border-2 border-white/10 hover:border-cyan-500/50 transition-all overflow-hidden`}
+    >
+      {tierVisual && (
+        <div className="absolute inset-0 opacity-10">
+          <Image src={tierVisual || "/placeholder.svg"} alt="tier" fill className="object-cover" />
+        </div>
+      )}
+
+      <div className="relative z-10 flex items-start justify-between mb-3">
         <div className="flex-1">
-          {/* Tier display with icon */}
-          <div className="flex items-center gap-2 mb-2">
-            <span className="text-3xl">{tierInfo?.icon || "?"}</span>
-            <div>
+          <div className="flex items-center gap-3 mb-2">
+            {upgradeImage && (
+              <div className="relative w-12 h-12 rounded-lg bg-white/10 border border-white/20 flex-shrink-0 overflow-hidden">
+                <Image
+                  src={upgradeImage || "/placeholder.svg"}
+                  alt={upgrade.name}
+                  fill
+                  className="object-cover"
+                  sizes="48px"
+                />
+              </div>
+            )}
+            <div className="flex-1">
               <p className="font-bold text-white text-sm">{upgrade.name}</p>
               <p className="text-xs text-cyan-400">{tierInfo?.name}</p>
             </div>
@@ -54,7 +77,7 @@ export default function UpgradeEvolutionCard({
               </div>
               <div className="w-full bg-slate-700 rounded-full h-1.5 overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-cyan-500 to-blue-500 transition-all"
+                  className={`h-full bg-gradient-to-r ${tierColor} transition-all`}
                   style={{ width: `${(progress.current / progress.max) * 100}%` }}
                 />
               </div>
@@ -84,14 +107,14 @@ export default function UpgradeEvolutionCard({
 
       {/* Tier benefits */}
       {tierInfo && (
-        <div className="text-xs bg-white/5 rounded p-2 mb-2">
+        <div className="relative z-10 text-xs bg-white/5 rounded p-2 mb-2">
           <span className="text-slate-400">Effect: </span>
           <span className="text-cyan-400 font-bold">{tierInfo.effectMultiplier.toFixed(1)}x</span>
         </div>
       )}
 
       {/* Owned count */}
-      <div className="text-xs text-slate-400">Owned: {owned}</div>
+      <div className="relative z-10 text-xs text-slate-400">Owned: {owned}</div>
     </Card>
   )
 }
