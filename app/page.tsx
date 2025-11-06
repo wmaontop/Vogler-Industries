@@ -8,7 +8,7 @@ const PRODUCTS = [
     name: "Mechanical Keyboards",
     baseCost: 5,
     income: 0.2,
-    img: "/assets/keyboards.png",
+    img: "/public/keyboards.png",
     desc: "Custom mechanical keyboards from Vogler.",
   },
   {
@@ -16,7 +16,7 @@ const PRODUCTS = [
     name: "Pro Mice",
     baseCost: 25,
     income: 1.2,
-    img: "/assets/mice.png",
+    img: "/public/mice.png",
     desc: "Precision mice that click with zeal.",
   },
   {
@@ -24,7 +24,7 @@ const PRODUCTS = [
     name: "Rack Servers",
     baseCost: 120,
     income: 8,
-    img: "/assets/rack_servers.png",
+    img: "/public/rack_servers.png",
     desc: "Powerful servers for hosting.",
   },
   {
@@ -32,7 +32,7 @@ const PRODUCTS = [
     name: "Server Racks",
     baseCost: 650,
     income: 50,
-    img: "/assets/server_racks.png",
+    img: "/public/server_racks.png",
     desc: "Organize and scale your datacenter.",
   },
   {
@@ -40,7 +40,7 @@ const PRODUCTS = [
     name: "Setup Help",
     baseCost: 3000,
     income: 260,
-    img: "/assets/setup_help.png",
+    img: "/public/setup_help.png",
     desc: "Consulting & hands-on setup services.",
   },
   {
@@ -48,7 +48,7 @@ const PRODUCTS = [
     name: "AI Assistants",
     baseCost: 12000,
     income: 900,
-    img: "/assets/ai.png",
+    img: "/public/ai.png",
     desc: "Automate your operations with AI.",
   },
   {
@@ -56,7 +56,7 @@ const PRODUCTS = [
     name: "Quantum Servers",
     baseCost: 70000,
     income: 5000,
-    img: "/assets/quantum.png",
+    img: "/public/quantum.png",
     desc: "Next-gen quantum computing.",
   },
   {
@@ -64,7 +64,7 @@ const PRODUCTS = [
     name: "Data Centers",
     baseCost: 350000,
     income: 28000,
-    img: "/assets/datacenter.png",
+    img: "/public/datacenter.png",
     desc: "Scale your empire globally.",
   },
   {
@@ -72,7 +72,7 @@ const PRODUCTS = [
     name: "Space Servers",
     baseCost: 2000000,
     income: 150000,
-    img: "/assets/space_servers.png",
+    img: "/public/space_servers.png",
     desc: "Servers in orbit for ultimate speed.",
   },
   {
@@ -80,7 +80,7 @@ const PRODUCTS = [
     name: "Nano Bots",
     baseCost: 10000000,
     income: 900000,
-    img: "/assets/nano_bots.png",
+    img: "/public/nano_bots.png",
     desc: "Automated nano bots for operations.",
   },
   {
@@ -88,7 +88,7 @@ const PRODUCTS = [
     name: "Logan Nichols",
     baseCost: 100000000,
     income: 1000000,
-    img: "/assets/logan.png",
+    img: "/public/logan.png",
     desc: "A wild Logan Nichols joins your team!",
   },
   {
@@ -96,12 +96,12 @@ const PRODUCTS = [
     name: "Salesman Vogler",
     baseCost: 999999999999,
     income: 100000000,
-    img: "/assets/SalesmanVoglerKeys.png",
+    img: "/public/SalesmanVoglerKeys.png",
     desc: "Salesman Vogler steals all SSDs!",
   },
 ]
 
-const AVATARS = ["/assets/vg1.jpg", "/assets/vg2.jpg", "/assets/vg3.jpg", "/assets/vg4.png", "/assets/vg5.png"]
+const AVATARS = ["/public/vg1.jpg", "/public/vg2.jpg", "/public/vg3.jpg", "/public/vg4.png", "/public/vg5.png"]
 
 const ACHIEVEMENTS = [
   { id: "first", name: "First Click", desc: "Make your first click", done: (s) => s.clickCount >= 1 },
