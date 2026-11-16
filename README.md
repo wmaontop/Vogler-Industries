@@ -7,3 +7,5 @@ I give anyone full permission to modify, sell, and/or improve it.
 ## Welcome To Pull Request.
 
 ## Vogler Industries | Clicker game
+
+v0.app help me transfer it over to ts so thats why there a ai.
