@@ -5,12 +5,4 @@ I give anyone full permission to modify, sell, and/or improve it.
 
 ## Welcome To Pull Request.
 
-## Clicker game
-
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/zolvc1232-8087s-projects/v0-clicker-game-improvement)
-
-## Deployment
-
-Project is live at:
-
-**[https://vercel.com/zolvc1232-8087s-projects/v0-clicker-game-improvement](https://vercel.com/zolvc1232-8087s-projects/v0-clicker-game-improvement)**
+## Vogler Industries | Clicker game
