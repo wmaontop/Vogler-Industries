@@ -1,30 +1,16 @@
-# Clicker game improvement
+# Made this in 8th for my tech teacher then presented it to the class since it was html and css also website development i got a 100 he really loved the idea, i took the class as a free period becuase i already know html css so here is the src.
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+# Disclaimer 
+I give anyone full permission to modify, sell, and/or improve it.
+
+## Welcome To Pull Request.
+
+## Clicker game
 
 [![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/zolvc1232-8087s-projects/v0-clicker-game-improvement)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/u8oKahpjapg)
-
-## Overview
-
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
 
 ## Deployment
 
-Your project is live at:
+Project is live at:
 
 **[https://vercel.com/zolvc1232-8087s-projects/v0-clicker-game-improvement](https://vercel.com/zolvc1232-8087s-projects/v0-clicker-game-improvement)**
-
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.app/chat/u8oKahpjapg](https://v0.app/chat/u8oKahpjapg)**
-
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
